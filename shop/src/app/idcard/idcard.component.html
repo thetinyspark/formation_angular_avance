@@ -1,0 +1,10 @@
+
+
+<input text="text" [(ngModel)]="name"/>
+<button (click)="add()"> Add </button>
+<div >
+    <ul >
+        <li *ngFor='let language of languages'>{{language}} <button (click)='del(language)'>delete</button></li>
+    </ul>
+</div>
+
