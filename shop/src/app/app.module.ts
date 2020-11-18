@@ -6,14 +6,16 @@ import { IDCardComponent } from './idcard/idcard.component';
 import { AcronymePipe } from './acronyme.pipe';
 import { RandomPipe } from './random.pipe';
 import { RouterModule} from '@angular/router';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { CalculComponent } from './calcul/calcul.component'
 @NgModule({
   declarations: [
     AppComponent,
     IDCardComponent,
     AcronymePipe,
     RandomPipe,
-    HomeComponent
+    HomeComponent,
+    CalculComponent
   ],
   imports: [
     BrowserModule, FormsModule, 
@@ -23,7 +25,12 @@ import { HomeComponent } from './home/home.component'
        "path":"idcard"},
        
        {"component":HomeComponent,
-       "path":"home"},
+       "path":"home/:id"},
+       {"component":CalculComponent,
+       "path":"calcul/:a/:b/:op"},
+       
+       {"component":HomeComponent,
+       "path":""},
        
       ]
     )
