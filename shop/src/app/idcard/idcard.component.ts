@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class IDCardComponent implements OnInit {
   name :string   = 'PHP';
 
-  public languages:Array<string> = [];
+  public languages:Array<string> = ['PHP','Basic','Erlang','C++','Fortran'];
   constructor() { 
   }
 
@@ -16,7 +16,7 @@ export class IDCardComponent implements OnInit {
   }
 
   add():void {
-    this.languages.push(this.name);
+    this.languages = [... this.languages,this.name];
   }
   del(lang:string):void {
 
