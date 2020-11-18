@@ -19,7 +19,7 @@ export class IDCardComponent implements OnInit {
     this.languages = [... this.languages,this.name];
   }
   del(lang:string):void {
-
+    console.log(lang)
    this.languages = this.languages.filter(function(item) {
     return item !== lang;
 })
