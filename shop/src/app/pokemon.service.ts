@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 import { Observable,of,pipe } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Pokemon } from './model/pokemon';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,10 +12,15 @@ export class PokemonService {
     this.httpClient = http;
   }
 
-  public getPokemon(id:string):Observable<any> {
-    return this.httpClient.get('https://pokeapi.co/api/v2/pokemon/'+id ).pipe(
+  public getPokemon(id:string|number):Observable<Pokemon|null> {
+    return this.httpClient.get<HttpResponse<any>>('https://pokeapi.co/api/v2/pokemon/'+id, {observe:'response'} ).pipe(
     map(
-      (data:any) => {return data as string}
+      (resp:HttpResponse<any>) => {
+        if (resp.status == 404) {
+          return null;
+        }
+        
+        return resp.body as Pokemon;}
       )
     )
   }

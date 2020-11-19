@@ -1,1 +1,11 @@
-<div *ngIf="pokemon">{{pokemon.name}}</div>
+<div *ngIf="pokemon">
+    <h2>Name : {{pokemon.name}}</h2>
+        <h3>Exp : {{pokemon.base_experience}}</h3>
+        <h3>height : {{pokemon.height}}</h3>
+        <h3>Weight: {{pokemon.weight}}</h3>
+</div>
+
+<div *ngIf="!pokemon">
+    pas de données
+</div>
+

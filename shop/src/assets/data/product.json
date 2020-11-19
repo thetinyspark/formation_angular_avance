@@ -1,0 +1,15 @@
+[ {
+   "id":1,
+   "name": "Les fleurs du mal",
+   "author" : "Charles Baudelaire"
+},
+{
+    "id":2,
+    "name" : "Les hauts de hurlevent",
+    "author" : "Eimily"
+},
+{
+    "id":3,
+    "name":"Fondation",
+     "author":"Asimov"
+}]
