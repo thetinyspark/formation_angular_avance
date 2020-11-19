@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,9 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class HomeComponent implements OnInit {
   public names:string[] = ["Nicolas", "Medhi", "Fabrice"]
   public pos = 0;
-  constructor(public router:ActivatedRoute) { }
+  public languages:string[];
+  constructor(public router:ActivatedRoute,public service:LanguageService) 
+  {this.languages = []; }
   
   ngOnInit(): void {
     this.router.paramMap.subscribe(
@@ -17,6 +20,9 @@ export class HomeComponent implements OnInit {
         this.pos =parseInt( map.get("id") as string);
       }
     )
+     this.service.getLanguages().subscribe(
+      result => this.languages = result
+    );
   }
 
 }

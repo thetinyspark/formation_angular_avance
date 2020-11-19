@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-idcard',
@@ -8,21 +9,27 @@ import { Component, OnInit } from '@angular/core';
 export class IDCardComponent implements OnInit {
   name :string   = 'PHP';
 
-  public languages:Array<string> = ['PHP','Basic','Erlang','C++','Fortran'];
-  constructor() { 
+  public languages:Array<string> = [];
+  constructor(public languageService:LanguageService) { 
   }
 
   ngOnInit(): void {
+   this.refresh();
   }
 
+  public refresh() :void{
+    this.languageService.getLanguages().subscribe(
+      result => this.languages = result
+    );
+  }
   add():void {
-    this.languages = [... this.languages,this.name];
+    this.languageService.add(this.name);
+    this.refresh(); 
   }
+  
   del(lang:string):void {
-    console.log(lang)
-   this.languages = this.languages.filter(function(item) {
-    return item !== lang;
-})
-
+    this.languageService.delete(lang);
+    this.refresh();
   }
+
 }

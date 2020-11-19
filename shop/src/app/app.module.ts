@@ -8,17 +8,23 @@ import { RandomPipe } from './random.pipe';
 import { RouterModule} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CalculComponent } from './calcul/calcul.component'
+import { LanguageService } from './language.service';
+import { AcronymeOnePipe } from './acronymeone.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { PokemonComponent } from './pokemon/pokemon.component';
 @NgModule({
   declarations: [
     AppComponent,
     IDCardComponent,
     AcronymePipe,
+    AcronymeOnePipe,
     RandomPipe,
     HomeComponent,
-    CalculComponent
+    CalculComponent,
+    PokemonComponent
   ],
   imports: [
-    BrowserModule, FormsModule, 
+    BrowserModule, HttpClientModule,FormsModule, 
     RouterModule.forRoot(
       [
         {"component":IDCardComponent,
@@ -28,14 +34,15 @@ import { CalculComponent } from './calcul/calcul.component'
        "path":"home/:id"},
        {"component":CalculComponent,
        "path":"calcul/:a/:b/:op"},
-       
+       {"component":PokemonComponent,
+       "path":"pokemon/:id"},
        {"component":HomeComponent,
        "path":""},
        
       ]
     )
   ],
-  providers: [],
+  providers: [HttpClientModule,LanguageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
