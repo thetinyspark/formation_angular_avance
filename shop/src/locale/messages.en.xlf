@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="34fa7787ba70225f5b715c6032763f0dcc429a4c" datatype="html">
+        <source>Catalogue</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3dab82ab1edcf3f664a10a5d075f70ef326503bb" datatype="html">
+        <source> Panier</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4fd7c8ecf71f80ed5df1a8437bb642507717da63" datatype="html">
+        <source>Clock</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6923e4a7f4f1f57abae6fe8a4c36d123a165cc65" datatype="html">
+        <source> Hello my freind</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Just say Hello</note>
+        <note priority="1" from="meaning">Bonjour</note>
+      </trans-unit>
+      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cart/cart.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf955ad994f631ae1ff32197521404b7f0223157" datatype="html">
+        <source>Ajouter au panier</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-detail/product-detail.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="391975bf9225ce4d46260e3b14076b12c3d58015" datatype="html">
+        <source>Ce produit est en promotion</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/product-detail/product-detail.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ab53d775ac54d52e4fe7f1d75983114830314201" datatype="html">
+        <source>not-allowed works!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/not-allowed/not-allowed.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,6 +1,12 @@
-<p>{{names[pos]}}</p>
-<div >
-    <ul >
-        <li *ngFor='let language of languages | random'>{{language }}</li>
-    </ul>
+<h1 i18n="Bonjour|Just say Hello"> Hello my freind</h1>
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<mat-slide-toggle (change)="toggleChange($event)">
+Slide me!
+</mat-slide-toggle>
+{{counter}}
+<div>
+    <button mat-raised-button color="primary" (click)="addrandom()">Primary</button>
+    <div *ngFor="let r of randomtab">{{r}}</div>
 </div>
+<app-product-thumb  *ngFor="let produit of produits | promotion" [product]="produit">{{produit.name}}</app-product-thumb>
+

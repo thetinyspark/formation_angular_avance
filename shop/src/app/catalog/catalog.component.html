@@ -1,0 +1,1 @@
+<app-product-thumb  *ngFor="let produit of produits" [product]="produit" (productAdded)="addChildProductToCart($event)">{{produit.name}}</app-product-thumb>

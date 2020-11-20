@@ -1,0 +1,7 @@
+<span i18n>The cart {content.length, plural, =0 {is empty} =1 {one product} other { contains {{content.length}} products}}</span>
+<ul>
+    <li *ngFor="let current of content">
+        {{current.name}}
+        <button (click)="remove(current)" i18n>Delete</button>
+    </li>
+</ul>

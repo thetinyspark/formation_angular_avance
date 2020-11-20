@@ -1,0 +1,5 @@
+<div routerLink="/product/{{product.id}}" *ngIf="product != null">
+    <h2>{{product.name}}</h2>
+    <img src={{product.img}} alt={{product.name}}/>
+</div>
+<button (click)="addToCard()"> Ajouter au panier</button>

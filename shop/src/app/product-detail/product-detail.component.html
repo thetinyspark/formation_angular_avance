@@ -1,0 +1,6 @@
+<div  *ngIf="product != null">
+    <h2>{{product.name}}</h2>
+    <img src={{product.img}} alt={{product.name}}/>
+    <p *ngIf="product.promotion"  i18n>Ce produit est en promotion</p>
+    <button (click)="addToCard()" i18n>Ajouter au panier</button>
+</div>

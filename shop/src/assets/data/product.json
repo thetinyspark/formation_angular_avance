@@ -1,15 +1,21 @@
 [ {
    "id":1,
    "name": "Les fleurs du mal",
-   "author" : "Charles Baudelaire"
+   "author" : "Charles Baudelaire",
+   "promotion":true,
+   "img": "http://codeskulptor-assets.commondatastorage.googleapis.com/assets_clock_hour_arrow.png"
 },
 {
     "id":2,
     "name" : "Les hauts de hurlevent",
-    "author" : "Eimily"
+    "author" : "Eimily",
+    "promotion":false,
+    "img": "http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/alien_6_1.png"
 },
 {
     "id":3,
     "name":"Fondation",
-     "author":"Asimov"
+     "author":"Asimov",
+     "promotion":false,
+     "img": "http://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/car_2.png"
 }]
